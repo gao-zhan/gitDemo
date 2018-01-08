@@ -22,5 +22,11 @@
 7)git status  查看文件状态 是否被修改过
 8)git diff  查看修改内容
 9)git log 查看提交日志 从最近到最远显示
-
+       添加参数--pretty=oneline 精简显示信息, 即：git log --pretty=oneline
+10)git reset --hard HEAD^  回退到上一个版本
+                    HEAD^^ 上上个版本
+                    HEAD~100 往上100个版本
+11)回退之后想回来该怎么办？
+   git reset --hard 版本号   (版本号写前几位就ok)
+   
 
