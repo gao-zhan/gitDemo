@@ -34,6 +34,18 @@
    git reflog  (每一次命令的记录)
 12)git checkout -- readme.md 撤销工作区的修改
    git reset HEAD readme.md   把暂存区的修改撤销掉
+13)删除文件:
+        工作区删除  rm readme.md
+        工作区删除不代表版本库删除：用git rm readme.md 删除版本库的该文件
+                                git commit -m '删除该文件'
+        如果工作区删错文件的话：撤销工作区操作：命令见（12）
+    注意：git rm 删除一个文件，如果该文件已经被提交到版本库，不用担心被误删，但是只能恢复到最新版本，你会丢失最近一次提交后你修改的内容.
+14）远程仓库
+        本地电脑生成SSH Key ：ssh-keygen -t rsa -C "youremail@example.com"
+        git remote add origin git@server-name:path/repo-name.git；
+        git push -u origin master；
+        操作演示该步骤
+        第一次clone或者push的时候，会有一个警告，需要验证
 
    
 
