@@ -24,9 +24,13 @@
 9)git log 查看提交日志 从最近到最远显示
        添加参数--pretty=oneline 精简显示信息, 即：git log --pretty=oneline
 10)git reset --hard HEAD^  回退到上一个版本
+                    HEAD 指向当前版本
                     HEAD^^ 上上个版本
                     HEAD~100 往上100个版本
 11)回退之后想回来该怎么办？
    git reset --hard 版本号   (版本号写前几位就ok)
+   找不到版本号该怎么办?
+   git reflog  (每一次命令的记录)
+
    
 
