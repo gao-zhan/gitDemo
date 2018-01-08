@@ -47,5 +47,8 @@
         操作演示该步骤
         第一次clone或者push的时候，会有一个警告，需要验证
 
-   
-
+15)git checkout -b 分支名      --新切分支并且切换到当前分支
+16)git checkout  分支名        --切换分支
+17)git branch                 --查看当前分支
+18)git merge 分支名            --合并分支
+19)git branch -d 分支名        --删除分支
