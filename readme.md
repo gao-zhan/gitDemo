@@ -20,7 +20,8 @@
 5)git add
 6)git commit -m '说明'
 7)git status  查看文件状态 是否被修改过
-8)git diff  查看修改内容
+8)git diff readme.md 查看修改内容
+      git diff HEAD -- readme.md
 9)git log 查看提交日志 从最近到最远显示
        添加参数--pretty=oneline 精简显示信息, 即：git log --pretty=oneline
 10)git reset --hard HEAD^  回退到上一个版本
@@ -31,6 +32,8 @@
    git reset --hard 版本号   (版本号写前几位就ok)
    找不到版本号该怎么办?
    git reflog  (每一次命令的记录)
+12)git checkout -- readme.md 撤销工作区的修改
+   git reset HEAD readme.md   把暂存区的修改撤销掉
 
    
 
