@@ -17,29 +17,44 @@
 4)git init 把这个目录变成Git可以管理的仓库
            创建完之后，多出来一个 .git目录 :该目录包含了资源的所有元数据,其他的项目目录保持不变(SVN会在每个子目录生成 .svn 目录，Git 只在仓库的根目录生成 .git 目录)
             ls -ah 查看该目录  *切记不要乱改该目录文件，否则容易把仓库破坏
+
 5)git add
 6)git commit -m '说明'
+
+
 7)git status  查看文件状态 是否被修改过
+
+
 8)git diff readme.md 查看修改内容
       git diff HEAD -- readme.md
+
+
 9)git log 查看提交日志 从最近到最远显示
        添加参数--pretty=oneline 精简显示信息, 即：git log --pretty=oneline
+
+
 10)git reset --hard HEAD^  回退到上一个版本
                     HEAD 指向当前版本
                     HEAD^^ 上上个版本
                     HEAD~100 往上100个版本
+
+
 11)回退之后想回来该怎么办？
    git reset --hard 版本号   (版本号写前几位就ok)
    找不到版本号该怎么办?
    git reflog  (每一次命令的记录)
+
+
 12)git checkout -- readme.md 撤销工作区的修改
    git reset HEAD readme.md   把暂存区的修改撤销掉
+
 13)删除文件:
         工作区删除  rm readme.md
         工作区删除不代表版本库删除：用git rm readme.md 删除版本库的该文件
                                 git commit -m '删除该文件'
         如果工作区删错文件的话：撤销工作区操作：命令见（12）
     注意：git rm 删除一个文件，如果该文件已经被提交到版本库，不用担心被误删，但是只能恢复到最新版本，你会丢失最近一次提交后你修改的内容.
+
 14）远程仓库
         本地电脑生成SSH Key ：ssh-keygen -t rsa -C "youremail@example.com"
         git remote add origin git@server-name:path/repo-name.git；
@@ -48,7 +63,21 @@
         第一次clone或者push的时候，会有一个警告，需要验证
 
 15)git checkout -b 分支名      --新切分支并且切换到当前分支
+
+
 16)git checkout  分支名        --切换分支
+
 17)git branch                 --查看当前分支
+
 18)git merge 分支名            --合并分支
+
+            注意:合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+                git merge --no-ff -m "xxx" 分支名
+
 19)git branch -d 分支名        --删除分支
+
+20)git log --graph            --查看分支合并图
+
+21)git stash  储藏分支
+
+
