@@ -89,3 +89,29 @@
 
 24)git branch -d 分支名      --删除分支
    git branch -D 分支名      --强行删除
+
+25)git remote      --查看远程库的信息  ,远程仓库的默认名称是origin, Git自动把本地的master分支和远程的master分支对应起来
+   git remote -v   --显示更详细的信息
+      origin	https://github.com/gao-zhan/gitDemo.git (fetch)
+      origin	https://github.com/gao-zhan/gitDemo.git (push)
+        抓取和推送地址，没有推送权限，就看不到push的地址
+
+26)git pull     --拉取远程库代码
+   git push     --推送本地代码到代码仓库
+
+27)git tag <tagname>           --新建一个标签  默认为HEAD
+   git tag <tagname>  版本号    -- 指定某一个上面添加标签
+   git tag -a tagname -m "version 0.1 released" 版本号
+   git show tagname         --查看标签信息
+   git tag -d tagname       --删除标签
+   git push origin :refs/tags/tagname    --远程仓库删除标签
+
+
+28)自定义标签
+        git config --global alias.st status
+        git config --global alias.co checkout
+        git config --global alias.ci commit
+        git config --global alias.br branch
+        git config --global alias.unstage 'reset HEAD'
+        git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+        --global参数是全局参数
