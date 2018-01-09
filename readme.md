@@ -80,4 +80,10 @@
 
 21)git stash  储藏分支
 
+22）git stash list  查看储藏的分支列表
+
+23)git stash apply 恢复储藏分支,但是stash内容没删除    git stash apply stash@{0} 恢复指定的stash
+   git stash drop 删除stash；
+
+   快捷方法：git stash pop 恢复的同时进行删除stash
 
