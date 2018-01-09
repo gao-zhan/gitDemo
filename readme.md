@@ -87,3 +87,5 @@
 
    快捷方法：git stash pop 恢复的同时进行删除stash
 
+24)git branch -d 分支名      --删除分支
+   git branch -D 分支名      --强行删除
